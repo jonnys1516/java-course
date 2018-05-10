@@ -27,44 +27,70 @@ public class pessoa {
     //perguntar nome
     public void laco() {
         nome = JOptionPane.showInputDialog("Qual o seu nome?");
+        
+        do{
+        	obterDados();
+        	 nomeIdadeMaior();
+        	 nomePesoMaior();
+        	 nomeAlturaMaior();
+        	 mediaAltura();
+        	 
+        	
+        
     
-       while(!nome.equals("SAIR")){
+        } while(!nome.equals("SAIR"));{
         quantidade++;
-       }		
-    
+        }
+        
+        
     }
+        
+        
+    
     	
     		//Obter Dados
-    	public void obterDados () {
+    public void obterDados () {
     
-    		//variável para validar
+    		//variavel para validar dados
     		boolean valida;
-    	  		
+    	} 		
     		
     		//Obter idade 
+    		public void nomeIdadeMaior() {
             idade = Integer.parseInt(JOptionPane.showInputDialog("Informe a idade." ));
                  if(idade > idadeMaior){
                  idadeMaior = idade;
                  nomeIdadeMaior = nome;
-
                  }
+                 }
+           //Obter peso
+                 public void nomePesoMaior() {
             peso = Double.parseDouble(JOptionPane.showInputDialog("Informe o seu peso."));
                  if(peso > pesoMaior){
                  pesoMaior = peso; 
                  nomePesoMaior = nome;
-                 }   
+                 }
+                 }
+               //Obter maior altura
+                 public void  nomeAlturaMaior() { 
                altura = Double.parseDouble(JOptionPane.showInputDialog("Informe a sua altura."));
-                 //Obter maior altura
-                 if(altura > alturaMaior){
-                 alturaMaior = altura; 
-                 nomeMaior = nome; 
-               //Obter média das alturas
-                 if(media > mediaAltura){
-                	 mediaAltura = media;
-                	 
+               if(altura > alturaMaior){
+            	   alturaMaior = altura;
+            	    nomeMaiorAltura = altura;
+               }
+               
+                 
                  }
                
-                 }               
+               //Obter média das alturas
+                 public void mediaAltura() {
+                 if(media > mediaAltura){
+                	 mediaAltura = media;
+                 
+                  
+                 }
+               
+                               
             //perguntar nome 
             nome = JOptionPane.showInputDialog("Informe seu nome ou SAIR para finalizar");
                
@@ -78,12 +104,13 @@ public class pessoa {
 
     }
         
+
+    
+                 
 }
-    
 
 
-    
-
+  
 
 
 
