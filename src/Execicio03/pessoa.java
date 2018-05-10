@@ -24,7 +24,7 @@ public class pessoa {
   
     
     
-    //perguntar nome 
+    //perguntar nome
     public void laco() {
         nome = JOptionPane.showInputDialog("Qual o seu nome?");
     
